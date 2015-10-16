@@ -1,6 +1,6 @@
-## Flexbox Grid System for Stylus - Website Sorce Code
+## Flexbox Grid System for Stylus - Website Source Code
 
-### Other repos:
+### Other related repos:
 
 - [Npm package](https://github.com/juliancwirko/s-grid)
 - [Grunt boilerplate with sGrid](https://github.com/juliancwirko/s-grid-grunt)
