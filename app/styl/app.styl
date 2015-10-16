@@ -268,8 +268,6 @@ body
             stack()
             +above(1000px)
                 cell(1, 4)
-            border-right rem-calc(1) solid lighten(color-main-dark, 90%)
-            padding-right rem-calc(40)
             ul
                 list-style-type none
                 text-align left
@@ -283,23 +281,27 @@ body
                     &.active,
                     &:hover
                         background-color darken(color-main-light, 3%)
-            > ul
-                > li
-                    font-size rem-calc(22)
-                    padding-top rem-calc(15)
-                    padding-bottom rem-calc(15)
-                    font-weight 600
-                    > ul
-                        > li
-                            font-weight 400
-                            font-size rem-calc(16)
-                            padding-top rem-calc(15)
+            > .wrap
+                border-right rem-calc(1) solid lighten(color-main-dark, 90%)
+                padding-right rem-calc(40)
+                > ul
+                    > li
+                        font-size rem-calc(22)
+                        padding-top rem-calc(15)
+                        padding-bottom rem-calc(15)
+                        font-weight 600
+                        > ul
+                            > li
+                                font-weight 400
+                                font-size rem-calc(16)
+                                padding-top rem-calc(15)
 
         .s-grid-docs-text
             stack()
             +above(1000px)
                 cell(3, 4)
-                padding-left rem-calc(40)
+                > .wrap
+                    padding-left rem-calc(40)
             pre
                 font-size rem-calc(14)
                 padding rem-calc(10)

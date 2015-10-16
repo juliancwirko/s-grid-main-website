@@ -36,39 +36,40 @@
             <div class="s-grid-container">
                 <div class="s-grid-documentation-content-wrapper">
                     <div class="s-grid-docs-menu">
-                        <ul>
-                            <li>
-                                <a href="/getting-started.html" class="active">
-                                    Getting Started
-                                </a>
-                                <ul>
-                                    <li>
-                                        <a href="/npm.html" >Npm package</a>
-                                    </li>
-                                    <li>
-                                        <a href="/grunt.html" >Usage with Grunt</a>
-                                    </li>
-                                    <li>
-                                        <a href="/react.html" >Usage with React</a>
-                                    </li>
-                                    <li>
-                                        <a href="/meteor.html" >Usage with Meteor</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="/docs.html" >
-                                    Grid
-                                </a>
-                                <ul>
-                                    <li>
-                                        <a href="/examples.html" >Examples</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>                    </div>
+                        <div class="wrap"><ul>
+    <li>
+        <a href="/getting-started.html" class="active">
+            Getting Started
+        </a>
+        <ul>
+            <li>
+                <a href="/npm.html" >Npm package</a>
+            </li>
+            <li>
+                <a href="/grunt.html" >Usage with Grunt</a>
+            </li>
+            <li>
+                <a href="/react.html" >Usage with React</a>
+            </li>
+            <li>
+                <a href="/meteor.html" >Usage with Meteor</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="/docs.html" >
+            Grid
+        </a>
+        <ul>
+            <li>
+                <a href="/examples.html" >Examples</a>
+            </li>
+        </ul>
+    </li>
+</ul></div>
+                    </div>
                     <div class="s-grid-docs-text">
-                        
+                        <div class="wrap">
 
 <h2 id="about">About</h2>
 <p><blockquote>Working with CSS is always hard especially in big projects. We have many CSS frameworks nowadays which try to help with this. Everyone knows Bootstrap or Foundation. Basically we always need some kind of grid system to be the foundation of our layout. A majority of those frameworks are based on a standard Box Model. It’s a well established approach and it’s really very useful. But sometimes we encounter some edge cases with it like vertical aligning, ordering and complicated systems with overdose CSS styles. We need something better. Here comes Flexbox (Flexible Box Layout)</blockquote></p>
@@ -124,6 +125,9 @@ s-grid-classes.styl // this one is optional</code></pre>
             When you need to support older browsers like IE10 and below.
         </li>
         <li>
+            There are some problems with Flexbox on IE11 which has workarounds. See here: <a href="https://github.com/philipwalton/flexbugs">https://github.com/philipwalton/flexbugs</a> Actually there is one of these workarounds used here on this page. (<a href="https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box">#7</a> IE11 bug)
+        </li>
+        <li>
             Other?
         </li>
     </ol>
@@ -160,6 +164,21 @@ s-grid-classes.styl // this one is optional</code></pre>
     </strong>
 </p>
 
+<p>
+    <strong>If you want to try other grid system. I can recommend awesome grids. Take a look at:</strong>
+    <ul>
+        <li>
+            <a href="http://jeet.gs">Jeet</a> - If you don't want to use Flexbox and you like how sGrid is built.
+        </li>
+        <li>
+            <a href="https://github.com/corysimmons/lost">Lost</a> - Great grid. You can use it with <a href="https://github.com/postcss/postcss">postCSS</a>
+        </li>
+        <li>
+            <a href="http://foundation.zurb.com/docs/components/grid.html">Zurb Foundation Grid</a> - Foundation 6 Grid will be so cool! You definitely need to check it out. (Scss)
+        </li>
+    </ul>
+</p>
+</div>
                     </div>
                 </div>
             </div>
