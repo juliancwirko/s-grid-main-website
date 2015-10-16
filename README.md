@@ -9,4 +9,4 @@
 
 If you have noticed errors on the site, please report them. Thanks :)
 
-Also you can use this website for your documentation. Just remember to change styling and of course contents ;)
+Also you can use this website for your documentation. Just remember to change styling and of course contents ;) also remove my analytics code, it is in app/partials/google-analytics.hbs file.
