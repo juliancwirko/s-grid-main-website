@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stylus Flexbox Grid System - Documentation</title>
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/app.min.css">
+    <body>
+        <header class="s-grid-sticky-header js-sticky-header">
+            <div class="s-grid-container">
+                <div class="s-grid-sticky-header-wrapper">
+                    <div class="s-grid-sticky-header-logo">
+                        <a href="/">sGrid</a>
+                    </div>
+                    <div class="s-grid-sticky-header-menu">
+                        <ul class="menu-list">
+                            <li class="menu-list-item">
+                                <a href="/getting-started.html">Getting Started</a>
+                            </li>
+                            <li class="menu-list-item">
+                                <a href="/docs.html">Docs</a>
+                            </li>
+                            <li class="menu-list-item">
+                                <a href="https://github.com/juliancwirko/s-grid-main-website">GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>        <section class="s-grid-documentation-intro">
+            <div class="s-grid-container">
+                <h1><span>sGrid</span> / Documentation</h1>
+            </div>
+        </section>        <section class="s-grid-documentation-content">
+            <div class="s-grid-container">
+                <div class="s-grid-documentation-content-wrapper">
+                    <div class="s-grid-docs-menu">
+                        <ul>
+                            <li>
+                                <a href="/getting-started.html" >
+                                    Getting Started
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="/npm.html" >Npm package</a>
+                                    </li>
+                                    <li>
+                                        <a href="/grunt.html" >Usage with Grunt</a>
+                                    </li>
+                                    <li>
+                                        <a href="/react.html" >Usage with React</a>
+                                    </li>
+                                    <li>
+                                        <a href="/meteor.html" >Usage with Meteor</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/docs.html" class="active">
+                                    Grid
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="/examples.html" >Examples</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>                    </div>
+                    <div class="s-grid-docs-text">
+                        
+
+<h2 id="grid">Grid</h2>
+<p>You can use it without helper classes (like s-grid-cell-sm-4 etc.) and with helper classes which is good if you want a quick prototype of something.</p>
+<h3 id="functions-stylus-">Functions (Stylus)</h3>
+<p>You can extend custom classes and use the grid() and cell() functions to create your custom styles. It is a very clean and simple usage case. It is also a recommended one because you will keep your html code clean and you can structure your styles as you want.</p>
+<p>These are main Stylus functions used in sGrid. You will find more examples below.</p>
+<ul>
+<li><strong>rem-calc(value)</strong> - calculates rem units.<ul>
+<li>Usage example:<ul>
+<li>rem-calc(20)</li>
+<li>rem-calc(20px)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>grid(direction = &#39;row&#39;, cells-align = &#39;top&#39;, justify = &#39;&#39;)</strong> Main grid function.<ul>
+<li>Params:<ul>
+<li><strong>direction</strong>:<ul>
+<li>&#39;row&#39; (default) - cells direction left to right</li>
+<li>&#39;row-reverse&#39; - cells direction right to left</li>
+<li>&#39;column&#39; - cells direction top to bottom</li>
+<li>&#39;column-reverse&#39; - cells direction bottom to top</li>
+</ul>
+</li>
+<li><strong>cells-align</strong> (works only with row and row-reverse directions)<ul>
+<li>&#39;top&#39;</li>
+<li>&#39;bottom&#39;</li>
+<li>&#39;center&#39;</li>
+<li>&#39;stretch&#39;</li>
+</ul>
+</li>
+<li><strong>justify</strong><ul>
+<li>&#39;start&#39; - justify all content left or top</li>
+<li>&#39;end&#39; - justify all content right or bottom</li>
+<li>&#39;center&#39; - justify all content center</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Usage examples:<ul>
+<li>grid()</li>
+<li>grid(&#39;row&#39;)</li>
+<li>grid(&#39;row-reverse&#39;, &#39;bottom&#39;)</li>
+<li>grid(direction: &#39;column&#39;)</li>
+<li>grid(direction: &#39;column&#39;, justify: &#39;end&#39;)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>cell(i = 1, cols = columns, align = &#39;&#39;, g = gutter)</strong><ul>
+<li>Params:<ul>
+<li><strong>i / cols</strong> - fraction</li>
+<li><strong>align</strong>:<ul>
+<li>&#39;top&#39;</li>
+<li>bottom&#39;</li>
+<li>&#39;center&#39;</li>
+</ul>
+</li>
+<li><strong>g</strong> - gutter</li>
+</ul>
+</li>
+<li>Usage examples:<ul>
+<li>cell(1, 2)</li>
+<li>cell(15, 45, &#39;top&#39;, 30px)</li>
+<li>cell(2, 3, g: 30)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>cell-offset(i = 1, cols = columns, g = gutter)</strong><ul>
+<li>Params:<ul>
+<li><strong>i / cols</strong> - fraction</li>
+<li><strong>g</strong> - gutter</li>
+</ul>
+</li>
+<li>Usage examples:<ul>
+<li>cell-offset(1, 6)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><a href="https://github.com/jenius/rupture">Rupture</a> media queries</strong><ul>
+<li>Usage examples:<ul>
+<li>+above(rem-calc(breakpoints[lg]))</li>
+<li>+below(rem-calc(768px))</li>
+<li>+below(768px)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>center(value)</strong> - centers main container with specified width value<ul>
+<li>Usage examples:<ul>
+<li>center(1000px)</li>
+<li>center(breakpoints[md])</li>
+<li>center(12.5rem)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>stack()</strong> - shortcut for cell(1, 1) - makes full width columns<ul>
+<li>Usage examples:<ul>
+<li>stack()</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="helper-classes">Helper classes</h3>
+<p>To use helper classes you need to import <strong>s-grid-classes.styl</strong> file.
+You can change main classes names in settings. If you remember Bootstrap or Foundation grid classes and you know how to use it you will understand exactly what to do. It is very similar to other CSS grids usage but here we use Flexbox.</p>
+<p><strong>Main grid classes</strong>:</p>
+<ul>
+<li><strong>.s-grid-top</strong> - align cells top</li>
+<li><strong>.s-grid-bottom</strong> - align cells bottom</li>
+<li><strong>.s-grid-center</strong> - align cells center (middle)</li>
+<li><strong>.s-grid-stretch</strong> - stretch cells</li>
+<li><strong>.s-grid-justify-center</strong> - justify content center</li>
+<li><strong>.s-grid-justify-start</strong> - justify content top or left</li>
+<li><strong>.s-grid-justify-end</strong> - justify content bottom or right</li>
+<li><strong>.s-grid-row</strong> - cells direction left to right</li>
+<li><strong>.s-grid-row-reverse</strong> - cells direction right to left</li>
+<li><strong>.s-grid-column</strong> - cells direction top to bottom</li>
+<li><strong>.s-grid-column-reverse</strong> - cells direction bottom to top</li>
+</ul>
+<p><strong>Main cell classes</strong>:</p>
+<ul>
+<li><strong>.s-grid-cell-top</strong> - single cell align top</li>
+<li><strong>.s-grid-cell-center</strong> - single cell align center (middle)</li>
+<li><strong>.s-grid-cell-bottom</strong> - single cell align bottom</li>
+</ul>
+<p>You can also use autogenerated grid helper classes like those from Bootstrap or Foundation. By default you have 12 column based grid. You can change it in settings. See how in &#39;Overwrite settings&#39;.</p>
+<p><strong>S-Grid generated helper classes</strong>:</p>
+<ul>
+<li><strong>Pattern: .{gridClass}-{breakpoint-symbol}-{number-of-columns}</strong> - use it on main grid container (block grid)<ul>
+<li>Usage examples:<ul>
+<li><strong>.s-grid-sm-6</strong></li>
+<li><strong>.s-grid-md-4</strong></li>
+<li><strong>.s-grid-lg-3</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Pattern: .{cellClass}-{breakpoint-symbol}-{number-of-columns}</strong> - use it on cell element (custom cell size)<ul>
+<li>Usage examples:<ul>
+<li><strong>.s-grid-cell-sm-12</strong></li>
+<li><strong>.s-grid-cell-xlg-3</strong></li>
+<li><strong>.s-grid-cell-md-6</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Pattern: .{cellClass}-offset-{breakpoint-symbol}-{number-of-columns}</strong> - use it on cell element (offset class)<ul>
+<li>Usage examples:<ul>
+<li><strong>.s-grid-cell-offset-sm-2</strong></li>
+<li><strong>.s-grid-cell-offset-lg-3</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<h3 id="with-only-functions">With only functions</h3>
+<p><strong>Stylus code</strong>:</p>
+<pre><code class="language-css">section
+    grid()
+    div
+        padding rem-calc(15)
+        cell(1, 4)
+        &amp;.other-cell
+            cell(2, 4, 'bottom')
+        &amp;.different-cell
+            cell(1, 3, g: 30px)</code></pre>
+<p>&nbsp;</p>
+<p><strong>HTML code</strong>:</p>
+<pre><code class="language-html">&lt;section&gt;
+    &lt;div&gt;Lorem ipsum&lt;/div&gt;
+    &lt;div&gt;Lorem ipsum&lt;/div&gt;
+    &lt;div class=&quot;other-cell&quot;&gt;Lorem ipsum&lt;/div&gt;
+    &lt;div&gt;Lorem ipsum&lt;/div&gt;
+    &lt;div class=&quot;different-cell&quot;&gt;Lorem ipsum&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+<p>&nbsp;</p>
+<h3 id="with-only-helper-classes">With only helper classes</h3>
+<p><strong>HTML code</strong>:</p>
+<pre><code>&lt;section class=&quot;s-grid-top&quot;&gt;
+    &lt;div class=&quot;s-grid-cell s-grid-cell-md-6&quot;&gt;Lorem ipsum&lt;/div&gt;
+    &lt;div class=&quot;s-grid-cell s-grid-cell-md-6&quot;&gt;Lorem ipsum&lt;/div&gt;
+    &lt;div class=&quot;s-grid-cell s-grid-cell-bottom s-grid-cell-md-12&quot;&gt;Lorem ipsum&lt;/div&gt;
+    &lt;div class=&quot;s-grid-cell s-grid-cell-md-8&quot;&gt;Lorem ipsum&lt;/div&gt;
+    &lt;div class=&quot;s-grid-cell s-grid-cell-center s-grid-cell-md-4 s-grid-cell-offset-md-4&quot;&gt;Lorem ipsum&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+<p>&nbsp;</p>
+<p><strong>Effect</strong>:</p>
+<section class="s-grid-top demo-grid">
+    <div class="s-grid-cell s-grid-cell-md-6 demo-item">Lorem ipsum</div>
+    <div class="s-grid-cell s-grid-cell-md-6 demo-item">Lorem ipsum</div>
+    <div class="s-grid-cell s-grid-cell-bottom s-grid-cell-md-12 demo-item">Lorem ipsum</div>
+    <div class="s-grid-cell s-grid-cell-md-6 demo-item">Lorem ipsum</div>
+    <div class="s-grid-cell s-grid-cell-center s-grid-cell-md-4 s-grid-cell-offset-md-4 demo-item">Lorem ipsum</div>
+</section>
+
+<p>&nbsp;</p>
+<h3 id="overwrite-settings">Overwrite settings</h3>
+<p>You can overwrite the settings (from <a href="https://github.com/juliancwirko/s-grid/blob/master/s-grid-settings.styl">s-grid-settings.styl</a> file), just place your settings after <strong>s-grid-settings</strong> import. In your main .styl file do something like this:</p>
+<pre><code class="language-bash">
+// main s-grid settings file:
+
+@import <span class="string">'s-grid-settings'</span>
+
+// my new settings goes here:
+
+base-font-size = <span class="number">16</span>            // base font size it is <span class="number">16</span>px by default it is used to calculate rem sizes
+gutter = <span class="number">20</span>px                  // gutters size
+columns = <span class="number">12</span>                   // how many columns you need <span class="keyword">in</span> your grid (usage with helper classes)
+gridClassName = <span class="string">'s-grid'</span>       // main grid wraper class name (usage with helper classes)
+cellClassName = <span class="string">'s-grid-cell'</span>  // main grid cell class name (usage with helper classes)
+
+breakpoints = {                // media queries breakpoints
+    sm: <span class="number">0</span>,
+    md: <span class="number">640</span>px,
+    lg: <span class="number">1200</span>px,
+    xlg: <span class="number">1440</span>px,
+    xxlg: <span class="number">1920</span>px
+}
+
+// s-grid imports:
+
+@import <span class="string">'s-grid-functions'</span>
+@import <span class="string">'s-grid-classes'</span>
+
+// ...
+// my app styles here..
+// ...</code></pre>
+
+<div>
+    <p>
+        <br>
+        <a href="/examples.html">See more examples...</a>
+    </p>
+</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="s-grid-footer">
+            <div class="s-grid-container">
+        
+                <div class="s-grid-footer-wrapper">
+                    <div class="s-grid-footer-left-column">
+                        sGrid is made and maintained by <a href="http://julian.io">Julian Ćwirko</a>
+                    </div>
+                    <div class="s-grid-footer-right-column">
+                        Built with sGrid - <a href="/grunt.html">Grunt scaffold</a>
+                    </div>
+                </div>
+            </div>
+        <script src="js/app.min.js"></script>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {{> header-meta}}
+    </head>
+    <body>
+        {{> sticky-header}}
+        {{> docs-intro}}
+        <section class="s-grid-documentation-content">
+            <div class="s-grid-container">
+                <div class="s-grid-documentation-content-wrapper">
+                    <div class="s-grid-docs-menu">
+                        {{> docs-menu}}
+                    </div>
+                    <div class="s-grid-docs-text">
+                        {{body}}
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{> footer}}
+        {{> footer-meta}}
+    </body>
+</html>

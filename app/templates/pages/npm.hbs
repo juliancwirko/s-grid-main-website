@@ -1,0 +1,90 @@
+---
+layout: docs.hbs
+title: Stylus Flexbox Grid System - Npm Package
+docsIntroTitle: Npm Package
+menuActive: npm
+---
+
+<h2>Standalone Npm package</h2>
+<p>
+    <img src="/images/npm.svg" alt="sGrid on Npm" class="s-grid-docs-image">
+    Basic usage of S-Grid is by simply installing the npm package and including .styl files in your project. You can install it by:
+</p>
+
+{{#markdown}}
+```bash
+$ npm install -g s-grid
+```
+&nbsp;
+
+Then in your project (main .styl file) include files:
+
+```css
+@import 's-grid-settings'
+// you can overwrite settings here
+@import 's-grid-functions'
+@import 's-grid-classes' // classes are optional - good for prototyping
+```
+
+&nbsp;
+
+{{/markdown}}
+
+<p>
+    Of course you can integrate it with your build systems. Also you need to use [autoprefixer-stylus](https://www.npmjs.com/package/autoprefixer-stylus). This is importat because of many flexbox vendor prefixes. Read more about it on its website.
+</p>
+
+<p>
+    You can use it with your command line like:
+</p>
+
+{{#markdown}}
+
+```bash
+$ stylus -u autoprefixer-stylus s-grid -w main.styl
+```
+&nbsp;
+{{/markdown}}
+
+<p>
+    It can be used as a standard Stylus plugin:
+</p>
+
+{{#markdown}}
+
+```javascript
+var stylus = require('stylus');
+var autoprefixer = require('autoprefixer-stylus');
+var sGrid = require('s-grid');
+
+stylus(css)
+    .use(sGrid())
+    .use(autoprefixer())
+    .render(function(err, output){
+        console.log(output);
+    });
+```
+&nbsp;
+{{/markdown}}
+
+<p>
+    Of course a better approach is to use it with the <a href="/grunt.html" title="Grunt ready to use workflow with Stylus Grid System"><strong>Grunt</strong></a> based scaffold project or with the <a href="/meteor.html" title="Meteor package for Stylus Grid System with Autoprefixer, Rupture and Stylus build plugin"><strong>Meteor</strong></a> project. There is a Meteor package on Atmosphere. Also you can use <a href="/react.html" title="React boilerplate with Webpack and Stylus Grid System"><strong>React</strong></a> boilerplate with sGrid and Webpack.
+</p>
+
+<p>
+    Here are the package's links:
+    <ul>
+        <li>
+            <a href="https://www.npmjs.com/package/s-grid">sGrid on Npm</a>
+        </li>
+        <li>
+            <a href="https://github.com/juliancwirko/s-grid">sGrid Npm package on GitHub</a>
+        </li>
+    </ul>
+</p>
+
+<p>
+    <strong>
+        For more detailed grid documentation see here: <a href="/docs.html">Grid</a>
+    </strong>
+</p>

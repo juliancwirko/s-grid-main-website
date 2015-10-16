@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stylus Flexbox Grid System - Getting Started</title>
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+        <!-- build:css css/app.min.css -->
+        <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="css/highlight.github.css">
+        <link rel="stylesheet" href="css/app.css">
+        <!-- endbuild -->    </head>
+    <body>
+        <header class="s-grid-sticky-header js-sticky-header">
+            <div class="s-grid-container">
+                <div class="s-grid-sticky-header-wrapper">
+                    <div class="s-grid-sticky-header-logo">
+                        <a href="/">sGrid</a>
+                    </div>
+                    <div class="s-grid-sticky-header-menu">
+                        <ul class="menu-list">
+                            <li class="menu-list-item">
+                                <a href="/getting-started.html">Getting Started</a>
+                            </li>
+                            <li class="menu-list-item">
+                                <a href="/docs.html">Docs</a>
+                            </li>
+                            <li class="menu-list-item">
+                                <a href="https://github.com/juliancwirko/s-grid-main-website">GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>        <section class="s-grid-documentation-intro">
+            <div class="s-grid-container">
+                <h1><span>sGrid</span> / Getting Started</h1>
+            </div>
+        </section>        <section class="s-grid-documentation-content">
+            <div class="s-grid-container">
+                <div class="s-grid-documentation-content-wrapper">
+                    <div class="s-grid-docs-menu">
+                        <ul>
+                            <li>
+                                <a href="/getting-started.html" class="active">
+                                    Getting Started
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="/npm.html" >Npm package</a>
+                                    </li>
+                                    <li>
+                                        <a href="/grunt.html" >Usage with Grunt</a>
+                                    </li>
+                                    <li>
+                                        <a href="/react.html" >Usage with React</a>
+                                    </li>
+                                    <li>
+                                        <a href="/meteor.html" >Usage with Meteor</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/docs.html" >
+                                    Grid
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="/examples.html" >Examples</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>                    </div>
+                    <div class="s-grid-docs-text">
+                        
+
+<h2 id="about">About</h2>
+<p><blockquote>Working with CSS is always hard especially in big projects. We have many CSS frameworks nowadays which try to help with this. Everyone knows Bootstrap or Foundation. Basically we always need some kind of grid system to be the foundation of our layout. A majority of those frameworks are based on a standard Box Model. It’s a well established approach and it’s really very useful. But sometimes we encounter some edge cases with it like vertical aligning, ordering and complicated systems with overdose CSS styles. We need something better. Here comes Flexbox (Flexible Box Layout)</blockquote></p>
+
+<p>Read more at: <a href="http://julian.io/s-grid-working-with-flexible-box-layouts/">julian.io</a></p>
+
+<p>sGrid is a Flexbox grid system built with Stylus CSS preprocessor. It is prepared to use with helper classes, like Bootstrap or Foundation does it, but also in a more semantic way by using special Stylus functions. More about it later. It is also based on CSS native calc().</p>
+
+<p>In the core of the grid lies the npm package which includes three main .styl files.</p>
+
+<pre><code class="language-bash">s-grid-settings.styl
+s-grid-functions.styl
+s-grid-classes.styl // this one is optional</code></pre>
+<p>&nbsp;</p>
+
+<p>
+    You can find the npm package on the npm registry here: <a href="https://www.npmjs.com/package/s-grid">https://www.npmjs.com/package/s-grid</a> and you can also preview files on GitHub here: <a href="https://github.com/juliancwirko/s-grid">https://github.com/juliancwirko/s-grid</a>
+</p>
+
+<p>
+    The first file includes grid settings, the second one is the grid logic, functions, and mixins, and the last one is the main grid structure and CSS classes. You can preview all files on github repo.
+</p>
+
+<p>
+    sGrid is divided into three files because you should have the possibility to overwrite settings and even functions in your project.
+</p>
+
+<p>
+    <strong>Why sGrid?</strong>
+    <ol>
+        <li>
+            It is made for Stylus and Stylus is the best! (imho) ;)
+        </li>
+        <li>
+            It is a Flexbox grid system which uses native calc() function.
+        </li>
+        <li>
+            You can use Stylus functions, but also ready to use classes (for prototyping etc.)
+        </li>
+        <li>
+            You can integrate it with other Stylus plugins in any type of project.
+        </li>
+        <li>
+            There are integrations for Grunt (scaffold), Meteor (package) and React (ready to use boilerplate with Webpack).
+        </li>
+    </ol>
+</p>
+
+<p>
+    <strong>When not to use sGrid?</strong>
+    <ol>
+        <li>
+            When you need to support older browsers like IE10 and below.
+        </li>
+        <li>
+            Other?
+        </li>
+    </ol>
+</p>
+
+<p>
+    <strong>For installation documentation choose how you want to use sGrid and read more in separate sections of this documentation.</strong>
+</p>
+
+<p>
+    <ol>
+        <li>
+            You can use it as a standalone <a href="/npm.html" title="Stylus Grid Npm package"><strong>Npm package</strong></a> (in every project which uses Stylus and Npm packages).
+        </li>
+        <li>
+            With ready to use <a href="/grunt.html" title="Grunt ready to use workflow with Stylus Grid System"><strong>Grunt workflow</strong></a>.
+        </li>
+        <li>
+            With the <a href="/react.html" title="React boilerplate with Webpack and Stylus Grid System"><strong>React boilerplate</strong></a>.
+        </li>
+        <li>
+            With the <a href="/meteor.html" title="Meteor package for Stylus Grid System with Autoprefixer, Rupture and Stylus build plugin"><strong>Meteor package</strong></a>.
+        </li>
+    </ol>
+</p>
+
+<p>
+    I encourage you to contributions :) in all sections whether it is React boilerplate or Grunt or Meteor. Or even this website. I know that some things could be done better and they will, but with contributors we can achieve it faster :)
+</p>
+
+<p>
+    <strong>
+        For more detailed grid documentation see here: <a href="/docs.html">Grid</a>
+    </strong>
+</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="s-grid-footer">
+            <div class="s-grid-container">
+        
+                <div class="s-grid-footer-wrapper">
+                    <div class="s-grid-footer-left-column">
+                        sGrid is made and maintained by <a href="http://julian.io">Julian Ćwirko</a>
+                    </div>
+                    <div class="s-grid-footer-right-column">
+                        Built with sGrid - <a href="/grunt.html">Grunt scaffold</a>
+                    </div>
+                </div>
+            </div>
+        </footer>        <!-- build:js js/app.min.js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="js/highlight.min.js"></script>
+        <script src="js/app.js"></script>
+        <!-- endbuild -->    </body>
+</html>

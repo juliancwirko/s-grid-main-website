@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stylus Flexbox Grid System - Npm Package</title>
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/app.min.css">
+    <body>
+        <header class="s-grid-sticky-header js-sticky-header">
+            <div class="s-grid-container">
+                <div class="s-grid-sticky-header-wrapper">
+                    <div class="s-grid-sticky-header-logo">
+                        <a href="/">sGrid</a>
+                    </div>
+                    <div class="s-grid-sticky-header-menu">
+                        <ul class="menu-list">
+                            <li class="menu-list-item">
+                                <a href="/getting-started.html">Getting Started</a>
+                            </li>
+                            <li class="menu-list-item">
+                                <a href="/docs.html">Docs</a>
+                            </li>
+                            <li class="menu-list-item">
+                                <a href="https://github.com/juliancwirko/s-grid-main-website">GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>        <section class="s-grid-documentation-intro">
+            <div class="s-grid-container">
+                <h1><span>sGrid</span> / Npm Package</h1>
+            </div>
+        </section>        <section class="s-grid-documentation-content">
+            <div class="s-grid-container">
+                <div class="s-grid-documentation-content-wrapper">
+                    <div class="s-grid-docs-menu">
+                        <ul>
+                            <li>
+                                <a href="/getting-started.html" >
+                                    Getting Started
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="/npm.html" class="active">Npm package</a>
+                                    </li>
+                                    <li>
+                                        <a href="/grunt.html" >Usage with Grunt</a>
+                                    </li>
+                                    <li>
+                                        <a href="/react.html" >Usage with React</a>
+                                    </li>
+                                    <li>
+                                        <a href="/meteor.html" >Usage with Meteor</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/docs.html" >
+                                    Grid
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="/examples.html" >Examples</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>                    </div>
+                    <div class="s-grid-docs-text">
+                        
+
+<h2>Standalone Npm package</h2>
+<p>
+    <img src="/images/npm.svg" alt="sGrid on Npm" class="s-grid-docs-image">
+    Basic usage of S-Grid is by simply installing the npm package and including .styl files in your project. You can install it by:
+</p>
+
+<pre><code class="language-bash">$ npm install -g s-grid</code></pre>
+<p>&nbsp;</p>
+<p>Then in your project (main .styl file) include files:</p>
+<pre><code class="language-css"><span class="at_rule">@<span class="keyword">import</span> <span class="string">'s-grid-settings'</span>
+// you can overwrite settings here
+@import <span class="string">'s-grid-functions'</span>
+@import <span class="string">'s-grid-classes'</span> // classes are optional - good for prototyping</code></pre>
+<p>&nbsp;</p>
+
+<p>
+    Of course you can integrate it with your build systems. Also you need to use [autoprefixer-stylus](https://www.npmjs.com/package/autoprefixer-stylus). This is importat because of many flexbox vendor prefixes. Read more about it on its website.
+</p>
+
+<p>
+    You can use it with your command line like:
+</p>
+
+<pre><code class="language-bash">$ stylus -u autoprefixer-stylus s-grid -w main.styl</code></pre>
+<p>&nbsp;</p>
+
+<p>
+    It can be used as a standard Stylus plugin:
+</p>
+
+<pre><code class="language-javascript"><span class="keyword">var</span> stylus = require(<span class="string">'stylus'</span>);
+<span class="keyword">var</span> autoprefixer = require(<span class="string">'autoprefixer-stylus'</span>);
+<span class="keyword">var</span> sGrid = require(<span class="string">'s-grid'</span>);
+
+stylus(css)
+    .use(sGrid())
+    .use(autoprefixer())
+    .render(<span class="function"><span class="keyword">function</span><span class="params">(err, output)</span>{</span>
+        console.log(output);
+    });</code></pre>
+<p>&nbsp;</p>
+
+<p>
+    Of course a better approach is to use it with the <a href="/grunt.html" title="Grunt ready to use workflow with Stylus Grid System"><strong>Grunt</strong></a> based scaffold project or with the <a href="/meteor.html" title="Meteor package for Stylus Grid System with Autoprefixer, Rupture and Stylus build plugin"><strong>Meteor</strong></a> project. There is a Meteor package on Atmosphere. Also you can use <a href="/react.html" title="React boilerplate with Webpack and Stylus Grid System"><strong>React</strong></a> boilerplate with sGrid and Webpack.
+</p>
+
+<p>
+    Here are the package's links:
+    <ul>
+        <li>
+            <a href="https://www.npmjs.com/package/s-grid">sGrid on Npm</a>
+        </li>
+        <li>
+            <a href="https://github.com/juliancwirko/s-grid">sGrid Npm package on GitHub</a>
+        </li>
+    </ul>
+</p>
+
+<p>
+    <strong>
+        For more detailed grid documentation see here: <a href="/docs.html">Grid</a>
+    </strong>
+</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="s-grid-footer">
+            <div class="s-grid-container">
+        
+                <div class="s-grid-footer-wrapper">
+                    <div class="s-grid-footer-left-column">
+                        sGrid is made and maintained by <a href="http://julian.io">Julian Ćwirko</a>
+                    </div>
+                    <div class="s-grid-footer-right-column">
+                        Built with sGrid - <a href="/grunt.html">Grunt scaffold</a>
+                    </div>
+                </div>
+            </div>
+        <script src="js/app.min.js"></script>
+</html>

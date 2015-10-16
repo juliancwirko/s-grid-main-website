@@ -1,0 +1,981 @@
+---
+layout: docs.hbs
+title: Stylus Flexbox Grid System - Examples
+docsIntroTitle: Examples
+menuActive: grid-examples
+---
+
+
+{{#markdown}}
+
+## Grid examples
+
+### Block grid
+
+**Block grid - Usage with functions:**
+
+**Stylus code**:
+```css
+.my-custom-class-for-grid
+    grid()
+    .my-custom-class-for-grid-cell
+        cell(1, 1)
+        +above(rem-calc(breakpoints[md]))
+            cell(1, 2)
+        +above(rem-calc(breakpoints[lg]))
+            cell(1, 3)
+        +above(rem-calc(breakpoints[xlg]))
+            cell(1, 4)
+        +above(rem-calc(breakpoints[xxlg]))
+            cell(1, 6)
+```
+
+&nbsp;
+
+**HTML code**:
+```html
+<div class="my-custom-class-for-grid">
+    <div class="my-custom-class-for-grid-cell">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae!
+    </div>
+    <div class="my-custom-class-for-grid-cell">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, rerum ratione at modi sunt!
+    </div>
+    <div class="my-custom-class-for-grid-cell">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="my-custom-class-for-grid-cell">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="my-custom-class-for-grid-cell">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="my-custom-class-for-grid-cell">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="my-custom-class-for-grid-cell">
+        Lorem ipsum dolor sit amet.
+    </div>
+</div>
+```
+
+&nbsp;
+
+**Effect:**
+
+<div class="my-custom-class-for-grid demo-grid">
+    <div class="my-custom-class-for-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae!
+    </div>
+    <div class="my-custom-class-for-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, rerum ratione at modi sunt!
+    </div>
+    <div class="my-custom-class-for-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="my-custom-class-for-grid-cell demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="my-custom-class-for-grid-cell demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="my-custom-class-for-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="my-custom-class-for-grid-cell demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+</div>
+
+**You can align all cells vertically by using:**
+
+* **grid(cells-align: 'top')** (default)
+* **grid(cells-align: 'center')**
+* **grid(cells-align: 'bottom')**
+* **grid(cells-align: 'stretch')**
+
+**Block grid - Usage with helper classes:**
+
+&nbsp;
+
+**Html code: **
+```
+<div class="s-grid-top s-grid-sm-12 s-grid-md-6 s-grid-lg-4 s-grid-xlg-3 s-grid-xxlg-2">
+    <div class="s-grid-cell">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae!
+    </div>
+    <div class="s-grid-cell">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, rerum ratione at modi sunt!
+    </div>
+    <div class="s-grid-cell">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="s-grid-cell">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="s-grid-cell">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell">
+        Lorem ipsum dolor sit amet.
+    </div>
+</div>
+```
+
+&nbsp;
+
+**Effects: **
+<div class="s-grid-top s-grid-sm-12 s-grid-md-6 s-grid-lg-4 s-grid-xlg-3 s-grid-xxlg-2 demo-grid">
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, rerum ratione at modi sunt!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+</div>
+
+**You can align all cells vertically by using:**
+
+* **s-grid-top**
+* **s-grid-center**
+* **s-grid-bottom**
+* **s-grid-stretch**
+
+**You can also add:**
+
+* **s-grid-justify-center** - centering all columns horizontally
+
+###Other block grid examples:
+
+**Block grid top example (s-grid-top)**
+
+<div class="s-grid-top demo-grid s-grid-sm-12 s-grid-md-6 s-grid-lg-4 s-grid-xlg-3 s-grid-xxlg-2">
+    <div class="s-grid-cell demo-item">
+        1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae distinctio dolorem magnam tempora pariatur at, dolor minus ducimus, eaque fugit est exercitationem, ea laborum architecto dolorum, sequi sapiente quasi. Assumenda.
+    </div>
+    <div class="s-grid-cell demo-item">
+        2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae!
+    </div>
+    <div class="s-grid-cell demo-item">
+        3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, rerum ratione at modi sunt!
+    </div>
+    <div class="s-grid-cell demo-item">
+        4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae distinctio dolorem magnam tempora pariatur at, dolor minus ducimus, eaque fugit est exercitationem, ea laborum architecto dolorum, sequi sapiente quasi. Assumenda.
+    </div>
+    <div class="s-grid-cell demo-item">
+        6 Lorem ipsum dolor sit amet.
+    </div>
+    <div class="s-grid-cell demo-item">
+        7 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        8 Lorem ipsum dolor sit amet.
+    </div>
+</div>
+
+**Block grid bottom example (s-grid-bottom)**
+
+<div class="s-grid-bottom demo-grid s-grid-sm-12 s-grid-md-6 s-grid-lg-4 s-grid-xlg-3 s-grid-xxlg-2">
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, rerum ratione at modi sunt!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae distinctio dolorem magnam tempora pariatur at, dolor minus ducimus, eaque fugit est exercitationem, ea laborum architecto dolorum, sequi sapiente quasi. Assumenda.
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+</div>
+
+**Block grid center example (s-grid-center)**
+
+<div class="s-grid-center demo-grid s-grid-sm-12 s-grid-md-6 s-grid-lg-4 s-grid-xlg-3 s-grid-xxlg-2">
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, rerum ratione at modi sunt!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae distinctio dolorem magnam tempora pariatur at, dolor minus ducimus, eaque fugit est exercitationem, ea laborum architecto dolorum, sequi sapiente quasi. Assumenda.
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+</div>
+
+**Block grid stretch example (s-grid-stretch)**
+
+<div class="s-grid-stretch demo-grid s-grid-sm-12 s-grid-md-6 s-grid-lg-4 s-grid-xlg-3 s-grid-xxlg-2">
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ut explicabo magnam, repellendus hic adipisci numquam atque minus molestias maxime fuga inventore eaque architecto sunt cumque, nostrum, provident, beatae nihil eveniet natus ipsa cupiditate earum incidunt aliquam. Magnam vitae ipsum rem quos, distinctio doloribus hic aliquid molestias iure quaerat tempore.
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, praesentium.
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, rerum ratione at modi sunt!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae distinctio dolorem magnam tempora pariatur at, dolor minus ducimus, eaque fugit est exercitationem, ea laborum architecto dolorum, sequi sapiente quasi. Assumenda.
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+</div>
+
+**Block grid justify-center example (s-grid-top s-grid-justify-center)**
+
+<div class="s-grid-top s-grid-justify-center demo-grid s-grid-sm-12 s-grid-md-6 s-grid-lg-4 s-grid-xlg-3 s-grid-xxlg-2">
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae!
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis omnis, cumque dicta quo vero explicabo doloribus dolores itaque inventore sit?
+    </div>
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, rerum ratione at modi sunt!
+    </div>
+</div>
+
+## Grid with different cells
+
+### Different cells - usage with functions
+
+&nbsp;
+**Stylus code**:
+```
+.my-custom-class-for-grid2
+    grid()
+    .my-custom-class-for-grid-cell2
+        &.type1
+            cell(1, 1)
+            +above(rem-calc(breakpoints[md]))
+                cell(1, 2)
+            +above(rem-calc(breakpoints[lg]))
+                cell(1, 3)
+        &.type2
+            cell(1, 1, 'center')
+            +above(rem-calc(breakpoints[lg]))
+                cell(1, 3, 'center')
+        &.type3
+            cell(1, 1)
+            +above(rem-calc(breakpoints[md]))
+                cell(1, 2)
+            +above(rem-calc(breakpoints[lg]))
+                cell(1, 1)
+        &.type4
+            cell(1, 2)
+            +above(rem-calc(breakpoints[lg]))
+                cell(2, 3)
+        &.type5
+            cell(1, 1, 'bottom')
+            +above(rem-calc(breakpoints[sm]))
+                cell(1, 2, 'bottom')
+            +above(rem-calc(breakpoints[md]))
+                cell(1, 1, 'bottom')
+            +above(rem-calc(breakpoints[lg]))
+                cell(1, 3, 'bottom')
+        &.type6
+            cell(1, 1)
+            +above(rem-calc(breakpoints[sm]))
+                cell(1, 3)
+        &.type7
+            cell(1, 1)
+            +above(rem-calc(breakpoints[sm]))
+                cell(1, 2)
+                cell-offset(1, 6)
+```
+
+&nbsp;
+
+**HTML code:**
+```
+<div class="my-custom-class-for-grid2">
+    <div class="my-custom-class-for-grid-cell2 type1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quaerat officiis doloribus commodi totam molestiae, maxime id, nisi sit veniam ipsam quam accusantium, quo iusto voluptatibus sequi. Quibusdam perspiciatis, dolor.
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, rerum ratione at modi sunt!
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure distinctio, assumenda, molestias culpa ad debitis qui odio quidem at, dolore nobis dolorem minus ea! Aspernatur minus commodi, tempora optio consequatur temporibus placeat perferendis possimus est veniam corrupti eum atque tempore dignissimos illum totam fuga error ea. Explicabo impedit, temporibus totam.
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type5">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type6">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type7">
+        Lorem ipsum dolor sit amet.
+    </div>
+</div>
+```
+
+&nbsp;
+
+**Effect:**
+<div class="my-custom-class-for-grid2 demo-grid">
+    <div class="my-custom-class-for-grid-cell2 type1 demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type1 demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quaerat officiis doloribus commodi totam molestiae, maxime id, nisi sit veniam ipsam quam accusantium, quo iusto voluptatibus sequi. Quibusdam perspiciatis, dolor.
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type2 demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type3 demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, rerum ratione at modi sunt!
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type4 demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure distinctio, assumenda, molestias culpa ad debitis qui odio quidem at, dolore nobis dolorem minus ea! Aspernatur minus commodi, tempora optio consequatur temporibus placeat perferendis possimus est veniam corrupti eum atque tempore dignissimos illum totam fuga error ea. Explicabo impedit, temporibus totam.
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type5 demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type6 demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="my-custom-class-for-grid-cell2 type7 demo-item">
+        Lorem ipsum dolor sit amet.
+    </div>
+</div>
+
+
+**You can use individual clasess for vertical positioning (examples):**
+
+* **cell(1, 3, 'top')** (default)
+* **cell(1, 3, 'center')**
+* **cell(1, 3, 'bottom')**
+
+**You can also use offsets here (examples):**
+
+* **cell-offset(1, 6)**
+* ..etc
+
+
+### Different cells - usage with helper classes:
+
+&nbsp;
+
+**HTML code:**
+
+```
+<div class="s-grid-top">
+    <div class="s-grid-cell s-grid-cell-sm-12 s-grid-cell-md-6 s-grid-cell-lg-4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell s-grid-cell-sm-12 s-grid-cell-md-6 s-grid-cell-lg-4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quaerat officiis doloribus commodi totam molestiae, maxime id, nisi sit veniam ipsam quam accusantium, quo iusto voluptatibus sequi. Quibusdam perspiciatis, dolor.
+    </div>
+    <div class="s-grid-cell s-grid-cell-center s-grid-cell-sm-12 s-grid-cell-md-12 s-grid-cell-lg-4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </div>
+    <div class="s-grid-cell s-grid-cell-sm-12 s-grid-cell-md-6 s-grid-cell-lg-12">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, rerum ratione at modi sunt!
+    </div>
+    <div class="s-grid-cell s-grid-cell-sm-6 s-grid-cell-md-6 s-grid-cell-lg-8">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure distinctio, assumenda, molestias culpa ad debitis qui odio quidem at, dolore nobis dolorem minus ea! Aspernatur minus commodi, tempora optio consequatur temporibus placeat perferendis possimus est veniam corrupti eum atque tempore dignissimos illum totam fuga error ea. Explicabo impedit, temporibus totam.
+    </div>
+    <div class="s-grid-cell s-grid-cell-bottom s-grid-cell-sm-6 s-grid-cell-md-12 s-grid-cell-lg-4">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="s-grid-cell s-grid-cell-sm-4">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="s-grid-cell s-grid-cell-sm-6 s-grid-cell-offset-sm-2">
+        Lorem ipsum dolor sit amet.
+    </div>
+</div>
+```
+
+&nbsp;
+
+**Effect:**
+<div class="s-grid-top demo-grid">
+    <div class="s-grid-cell demo-item s-grid-cell-sm-12 s-grid-cell-md-6 s-grid-cell-lg-4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell demo-item s-grid-cell-sm-12 s-grid-cell-md-6 s-grid-cell-lg-4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quaerat officiis doloribus commodi totam molestiae, maxime id, nisi sit veniam ipsam quam accusantium, quo iusto voluptatibus sequi. Quibusdam perspiciatis, dolor.
+    </div>
+    <div class="s-grid-cell demo-item s-grid-cell-center s-grid-cell-sm-12 s-grid-cell-md-12 s-grid-cell-lg-4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </div>
+    <div class="s-grid-cell demo-item s-grid-cell-sm-12 s-grid-cell-md-6 s-grid-cell-lg-12">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, rerum ratione at modi sunt!
+    </div>
+    <div class="s-grid-cell demo-item s-grid-cell-sm-6 s-grid-cell-md-6 s-grid-cell-lg-8">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quia doloribus dolore aliquid dolorum, cumque cum natus architecto, qui voluptatum aperiam error distinctio. Quibusdam sed atque earum nostrum fuga repudiandae, dolorem a nesciunt, esse illo architecto accusamus culpa tenetur aperiam ab nam ex. Recusandae nihil reiciendis sint ab laboriosam, earum.
+    </div>
+    <div class="s-grid-cell s-grid-cell-bottom demo-item s-grid-cell-sm-6 s-grid-cell-md-12 s-grid-cell-lg-4">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="s-grid-cell demo-item s-grid-cell-sm-4">
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="s-grid-cell demo-item s-grid-cell-sm-6 s-grid-cell-offset-sm-2">
+        Lorem ipsum dolor sit amet.
+    </div>
+</div>
+
+&nbsp;
+
+**You can use individual clasess for vertical positioning:**
+
+* **s-grid-cell-top**
+* **s-grid-cell-center**
+* **s-grid-cell-bottom**
+
+**You can also use offsets here, just add classes like:**
+
+* **s-grid-cell-offset-sm-2**
+* **s-grid-cell-offset-lg-3**
+* **s-grid-cell-offset-xxlg-6**
+* ..etc
+
+## Nested grids
+
+### Nested grids - usage with functions:
+
+&nbsp;
+
+**Stylus code**:
+```css
+.my-custom-class-for-grid3
+    grid()
+    .my-custom-class-for-grid-cell3
+        cell(1, 1)
+        +above(rem-calc(breakpoints[lg]))
+            cell(1, 2)
+        .my-custom-class-for-grid3_1
+            grid()
+            .my-custom-class-for-grid-cell3_1
+                cell(1, 1)
+                +above(rem-calc(breakpoints[lg]))
+                    cell(1, 2)
+```
+
+&nbsp;
+
+**HTML code:**
+```
+<div class="my-custom-class-for-grid3">
+    <div class="my-custom-class-for-grid-cell3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell3">
+        <div class="my-custom-class-for-grid3_1">
+            <div class="my-custom-class-for-grid-cell3_1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, dicta?
+            </div>
+            <div class="my-custom-class-for-grid-cell3_1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea esse molestiae odit iusto at sapiente dicta reiciendis doloremque optio, atque!
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+&nbsp;
+
+**Effect:**
+<div class="my-custom-class-for-grid3 demo-grid">
+    <div class="my-custom-class-for-grid-cell3 demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell3 demo-item">
+        <div class="my-custom-class-for-grid3_1 demo-grid">
+            <div class="my-custom-class-for-grid-cell3_1 demo-item">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, dicta?
+            </div>
+            <div class="my-custom-class-for-grid-cell3_1 demo-item">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea esse molestiae odit iusto at sapiente dicta reiciendis doloremque optio, atque!
+            </div>
+        </div>
+    </div>
+</div>
+
+### Nested grids - usage with helper classes:
+
+&nbsp;
+
+**HTML code:**
+```
+<div class="s-grid-top s-grid-sm-12 s-grid-lg-6">
+    <div class="s-grid-cell">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell">
+        <div class="s-grid-top s-grid-sm-12 s-grid-lg-6">
+            <div class="s-grid-cell">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, dicta?
+            </div>
+            <div class="s-grid-cell">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea esse molestiae odit iusto at sapiente dicta reiciendis doloremque optio, atque!
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+&nbsp;
+
+**Effect:**
+<div class="s-grid-top demo-grid s-grid-sm-12 s-grid-lg-6">
+    <div class="s-grid-cell demo-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        <div class="s-grid-top demo-grid s-grid-sm-12 s-grid-lg-6">
+            <div class="s-grid-cell demo-item">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, dicta?
+            </div>
+            <div class="s-grid-cell demo-item">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea esse molestiae odit iusto at sapiente dicta reiciendis doloremque optio, atque!
+            </div>
+        </div>
+    </div>
+</div>
+
+## Grid direction:
+
+### Grid direction - usage with functions:
+
+**You can change the direction of the grid cells**
+
+* **grid(direction: 'column')** (from top to bottom)
+* **grid(direction: 'column-reverse')** (from bottom to top)
+* **grid(direction: 'row')** (from left to right - default)
+* **grid(direction: 'row-reverse')** (from right to left)
+
+If you use the column direction (top to bottom or bottom to top) you can control your main s-grid container height. The width of the container should be dynamic or you can set 'overflow-x: auto' on it. Remember that with this grid type you should control cells width too. Only height and amount of the cells in column will be adjusted based on helper clasess here
+
+**Grid direction example 1:**
+
+**Stylus code**:
+```css
+.my-custom-class-for-grid4
+    grid(direction: 'column')
+    .my-custom-class-for-grid-cell4
+        cell(1, 1)
+        width rem-calc(250)
+        +above(rem-calc(breakpoints[md]))
+            cell(1, 2)
+        +above(rem-calc(breakpoints[lg]))
+            cell(1, 3)
+```
+
+&nbsp;
+
+**HTML code**:
+```
+<div class="my-custom-class-for-grid4">
+    <div class="my-custom-class-for-grid-cell4">
+        1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell4">
+        2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae sint sapiente distinctio error molestias officiis tenetur porro perferendis doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell4">
+        3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, perspiciatis!
+    </div>
+    <div class="my-custom-class-for-grid-cell4">
+        4 Lorem ipsum dolor sit.
+    </div>
+    <div class="my-custom-class-for-grid-cell4">
+        5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, architecto.
+    </div>
+    <div class="my-custom-class-for-grid-cell4">
+        6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci minus laboriosam nisi vero, est dignissimos.
+    </div>
+    <div class="my-custom-class-for-grid-cell4">
+        7 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="my-custom-class-for-grid-cell4">
+        8 Lorem ipsum dolor sit amet.
+    </div>
+</div>
+```
+
+&nbsp;
+
+**Effect:**
+<div class="my-custom-class-for-grid4 demo-grid">
+    <div class="my-custom-class-for-grid-cell4 demo-item">
+        <strong>1</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell4 demo-item">
+        <strong>2</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae sint sapiente distinctio error molestias officiis tenetur porro perferendis doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell4 demo-item">
+        <strong>3</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, perspiciatis!
+    </div>
+    <div class="my-custom-class-for-grid-cell4 demo-item">
+        <strong>4</strong> Lorem ipsum dolor sit.
+    </div>
+    <div class="my-custom-class-for-grid-cell4 demo-item">
+        <strong>5</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, architecto.
+    </div>
+    <div class="my-custom-class-for-grid-cell4 demo-item">
+        <strong>6</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci minus laboriosam nisi vero, est dignissimos.
+    </div>
+    <div class="my-custom-class-for-grid-cell4 demo-item">
+        <strong>7</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="my-custom-class-for-grid-cell4 demo-item">
+        <strong>8</strong> Lorem ipsum dolor sit amet.
+    </div>
+</div>
+
+**Grid direction example 2:**
+
+**Stylus code**:
+```css
+.my-custom-class-for-grid5
+    grid(direction: 'row-reverse')
+    .my-custom-class-for-grid-cell5
+        cell(1, 1)
+        width rem-calc(250)
+        +above(rem-calc(breakpoints[md]))
+            cell(1, 2)
+        +above(rem-calc(breakpoints[lg]))
+            cell(1, 3)
+```
+
+&nbsp;
+
+**HTML code:**
+```
+<div class="my-custom-class-for-grid5">
+    <div class="my-custom-class-for-grid-cell5">
+        1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell5">
+        2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae sint sapiente distinctio error molestias officiis tenetur porro perferendis doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell5">
+        3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, perspiciatis!
+    </div>
+    <div class="my-custom-class-for-grid-cell5">
+        4 Lorem ipsum dolor sit.
+    </div>
+    <div class="my-custom-class-for-grid-cell5">
+        5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, architecto.
+    </div>
+    <div class="my-custom-class-for-grid-cell5">
+        6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci minus laboriosam nisi vero, est dignissimos.
+    </div>
+    <div class="my-custom-class-for-grid-cell5">
+        7 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="my-custom-class-for-grid-cell5">
+        8 Lorem ipsum dolor sit amet.
+    </div>
+</div>
+```
+
+&nbsp;
+
+**Effect:**
+<div class="my-custom-class-for-grid5 demo-grid">
+    <div class="my-custom-class-for-grid-cell5 demo-item">
+        <strong>1</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell5 demo-item">
+        <strong>2</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae sint sapiente distinctio error molestias officiis tenetur porro perferendis doloribus!
+    </div>
+    <div class="my-custom-class-for-grid-cell5 demo-item">
+        <strong>3</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, perspiciatis!
+    </div>
+    <div class="my-custom-class-for-grid-cell5 demo-item">
+        <strong>4</strong> Lorem ipsum dolor sit.
+    </div>
+    <div class="my-custom-class-for-grid-cell5 demo-item">
+        <strong>5</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, architecto.
+    </div>
+    <div class="my-custom-class-for-grid-cell5 demo-item">
+        <strong>6</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci minus laboriosam nisi vero, est dignissimos.
+    </div>
+    <div class="my-custom-class-for-grid-cell5 demo-item">
+        <strong>7</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="my-custom-class-for-grid-cell5 demo-item">
+        <strong>8</strong> Lorem ipsum dolor sit amet.
+    </div>
+</div>
+
+### Grid direction - usage with helper classes:
+
+**You can change the direction of the grid cells. To do so, just add one more class:**
+
+* **s-grid-column** (from top to bottom)
+* **s-grid-column-reverse** (from bottom to top)
+* **s-grid-row** (from left to right - default)
+* **s-grid-row-reverse** (from right to left)
+
+If you use the column direction (top to bottom or bottom to top) you can control your main s-grid container height. The width of the container should be dynamic or you can set 'overflow-x: auto' on it. Remember that with this grid type you should control cells width too. Only height and amount of the cells in column will be adjusted based on helper clasess here.
+
+**Grid direction example 1:**
+
+**HTML code:**
+```
+<div style="height: 500px; overflow-x: auto;" class="s-grid-top s-grid-column s-grid-sm-12 s-grid-md-6 s-grid-lg-4">
+    <div class="s-grid-cell" style="width: 250px;">
+        1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell" style="width: 250px;">
+        2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae sint sapiente distinctio error molestias officiis tenetur porro perferendis doloribus!
+    </div>
+    <div class="s-grid-cell" style="width: 250px;">
+        3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, perspiciatis!
+    </div>
+    <div class="s-grid-cell" style="width: 250px;">
+        4 Lorem ipsum dolor sit.
+    </div>
+    <div class="s-grid-cell" style="width: 250px;">
+        5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, architecto.
+    </div>
+    <div class="s-grid-cell" style="width: 250px;">
+        6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci minus laboriosam nisi vero, est dignissimos.
+    </div>
+    <div class="s-grid-cell" style="width: 250px;">
+        7 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell" style="width: 250px;">
+        8 Lorem ipsum dolor sit amet.
+    </div>
+</div>
+```
+
+&nbsp;
+
+**Effect:**
+<div style="height: 500px; overflow-x: auto;" class="s-grid-top demo-grid s-grid-column s-grid-sm-12 s-grid-md-6 s-grid-lg-4">
+    <div class="s-grid-cell demo-item" style="width: 250px;">
+        <strong>1</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell demo-item" style="width: 250px;">
+        <strong>2</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae sint sapiente distinctio error molestias officiis tenetur porro perferendis doloribus!
+    </div>
+    <div class="s-grid-cell demo-item" style="width: 250px;">
+        <strong>3</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, perspiciatis!
+    </div>
+    <div class="s-grid-cell demo-item" style="width: 250px;">
+        <strong>4</strong> Lorem ipsum dolor sit.
+    </div>
+    <div class="s-grid-cell demo-item" style="width: 250px;">
+        <strong>5</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, architecto.
+    </div>
+    <div class="s-grid-cell demo-item" style="width: 250px;">
+        <strong>6</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci minus laboriosam nisi vero, est dignissimos.
+    </div>
+    <div class="s-grid-cell demo-item" style="width: 250px;">
+        <strong>7</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell demo-item" style="width: 250px;">
+        <strong>8</strong> Lorem ipsum dolor sit amet.
+    </div>
+</div>
+
+**Grid direction example 2:**
+
+**HTML code:**
+```
+<div class="s-grid-top s-grid-row-reverse s-grid-sm-12 s-grid-md-6 s-grid-lg-4">
+    <div class="s-grid-cell">
+        1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell">
+        2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae sint sapiente distinctio error molestias officiis tenetur porro perferendis doloribus!
+    </div>
+    <div class="s-grid-cell">
+        3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, perspiciatis!
+    </div>
+    <div class="s-grid-cell">
+        4 Lorem ipsum dolor sit.
+    </div>
+    <div class="s-grid-cell">
+        5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, architecto.
+    </div>
+    <div class="s-grid-cell">
+        6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci minus laboriosam nisi vero, est dignissimos.
+    </div>
+    <div class="s-grid-cell">
+        7 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell">
+        8 Lorem ipsum dolor sit amet.
+    </div>
+</div>
+```
+
+&nbsp;
+
+**Effect:**
+<div class="s-grid-top demo-grid s-grid-row-reverse s-grid-sm-12 s-grid-md-6 s-grid-lg-4">
+    <div class="s-grid-cell demo-item">
+        <strong>1</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        <strong>2</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae sint sapiente distinctio error molestias officiis tenetur porro perferendis doloribus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        <strong>3</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, perspiciatis!
+    </div>
+    <div class="s-grid-cell demo-item">
+        <strong>4</strong> Lorem ipsum dolor sit.
+    </div>
+    <div class="s-grid-cell demo-item">
+        <strong>5</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, architecto.
+    </div>
+    <div class="s-grid-cell demo-item">
+        <strong>6</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci minus laboriosam nisi vero, est dignissimos.
+    </div>
+    <div class="s-grid-cell demo-item">
+        <strong>7</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+    <div class="s-grid-cell demo-item">
+        <strong>8</strong> Lorem ipsum dolor sit amet.
+    </div>
+</div>
+
+## Cells reordering
+
+You can use standard Flexbox order features. Example:
+
+**Stylus:**
+```bash
+.item
+    order 1
+
+.my-special-item
+    order 0
+```
+
+&nbsp;
+
+**HTML code:**
+```
+<div class="s-grid-top s-grid-justify-center">
+    <div class="s-grid-cell s-grid-cell-sm-3 item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell s-grid-cell-sm-3 item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae!
+    </div>
+    <div class="s-grid-cell s-grid-cell-sm-3 my-special-item">
+        It should be first!
+    </div>
+    <div class="s-grid-cell s-grid-cell-sm-3 item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+</div>
+```
+&nbsp;
+
+So **my-special-item** element should be first now.
+
+**Effect:**
+<div class="s-grid-top demo-grid s-grid-justify-center">
+    <div class="s-grid-cell demo-item s-grid-cell-sm-3 item normal-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, doloribus!
+    </div>
+    <div class="s-grid-cell demo-item s-grid-cell-sm-3 item normal-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae!
+    </div>
+    <div class="s-grid-cell demo-item s-grid-cell-sm-3 my-special-item">
+        <strong>It should be first!</strong>
+    </div>
+    <div class="s-grid-cell demo-item s-grid-cell-sm-3 item normal-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, repellendus!
+    </div>
+</div>
+
+## Also take a look at:
+
+- [Codepen example 1](http://codepen.io/juliancwirko/pen/YyVoZo)
+- [Codepen example 2](http://codepen.io/juliancwirko/pen/NGgeRw)
+- [This website source code on GitHub](https://github.com/juliancwirko/s-grid-main-website)
+
+{{/markdown}}

@@ -1,0 +1,52 @@
+---
+layout: docs.hbs
+title: Stylus Flexbox Grid System - Grunt Boilerplate
+docsIntroTitle: Grunt Boilerplate
+menuActive: grunt
+---
+
+<h2>Usage with Grunt</h2>
+<p>
+    <img src="/images/grunt.svg" alt="sGrid Grunt" class="s-grid-docs-image">
+    If you want to work with Grunt you need to check out this repo: <a href="https://github.com/juliancwirko/s-grid-grunt">https://github.com/juliancwirko/s-grid-grunt</a>
+</p>
+
+<p>
+    This is a ready to use Grunt project scaffold. All you need is npm and bower installed.
+</p>
+
+<p>
+    You will have a clean project scaffold with Autoprefixer included and working. When you clone the repo just run 'grunt' task and the server with live reload should start on 127.0.0.1:9000. All your changes will reload your website.
+</p>
+
+<p>
+    There will be two folders 'app' and 'dist'. You should work in the 'app' folder and then build the project into the 'dist' folder. In the 'app' folder there are such subfolders like 'styl', 'js', 'images', 'css' (compiled from styl files) and also .html files (compiled from .hbs files).
+</p>
+<p>
+    You can build your project by running 'grunt publish’. It will prepare your CSS and js files and it will compress and concatenate them. Also you should work on .hbs files in the 'templates' folder. These are Handlebars templates and there is a <a href="https://www.npmjs.com/package/grunt-assemble">grunt-assemble</a> task which will compile it to .html files. This is cool because you can use template layouts, partials and even helpers. This website is build like that so you can go and see the source code on GitHub. Also I encourage you to read about <a href="http://assemble.io/docs/Templates-Overview.html">Assemble templating system</a>.
+</p>
+
+<p>
+    <strong>If you want to use sGrid with Grunt just run:</strong>
+</p>
+
+{{#markdown}}
+
+```bash
+$ git clone git@github.com:juliancwirko/s-grid-grunt.git
+$ cd s-grid-grunt
+$ rm -rf .git
+$ npm install
+$ bower install
+$ grunt
+```
+&nbsp;
+{{/markdown}}
+
+<p>Do You want a better example? Go and see the sourcecode of this website: <a href="https://github.com/juliancwirko/s-grid-main-website">sGrid Website GitHub</a></p>
+
+<p>
+    <strong>
+        For more detailed grid documentation see here: <a href="/docs.html">Grid</a>
+    </strong>
+</p>
