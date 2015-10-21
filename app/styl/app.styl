@@ -44,22 +44,22 @@ body
         +above(breakpoints[md])
             cell(1, 2, align: 'center')
     .s-grid-sticky-header-logo
-        font-size rem-calc(25)
-        font-weight 900
+        font-size rem-calc(20)
+        font-weight 700
         transition font-size .3s, padding .3s
         +above(breakpoints[md])
             text-align left
         a
             display inline-block
-            padding rem-calc(5) rem-calc(15)
-            border rem-calc(3) solid lighten(color-main-dark, 20%)
+            padding rem-calc(8) rem-calc(20)
+            border rem-calc(2) solid lighten(color-main-dark, 20%)
     &.scrolled
         padding-top 0
         padding-bottom 0
         .s-grid-sticky-header-logo
             font-size rem-calc(18)
             a
-                padding rem-calc(2) rem-calc(10)
+                padding rem-calc(5) rem-calc(15)
     .s-grid-sticky-header-menu
         +above(breakpoints[md])
             text-align right
@@ -74,13 +74,14 @@ body
                     display inline-block
                     position relative
                     padding-bottom rem-calc(10)
+                    font-weight 300
                     &:after
                         position absolute
                         opacity 0
                         content " "
                         display block
                         width 0
-                        height 0.1875rem
+                        height rem-calc(2)
                         background-color #252525
                         bottom 0
                         left 50%
@@ -108,13 +109,13 @@ body
         .s-grid-headline,
         .s-grid-subheadline
             font-family font-headers
-            font-weight 900
             padding-left rem-calc(20)
             padding-right rem-calc(20)
         .s-grid-headline
             display none
             +above(breakpoints[md])
                 display block
+            font-weight 900
             font-size rem-calc(85)
             margin-bottom rem-calc(25)
             .border
@@ -123,6 +124,7 @@ body
                 border rem-calc(15) solid color-main-light
         .s-grid-subheadline
             font-size rem-calc(45)
+            font-weight 400
             +above(breakpoints[md])
                 font-size rem-calc(35)
     .s-grid-read-more
@@ -156,13 +158,14 @@ body
         .s-grid-read-more
             cell(1, 1)
             text-align center
+            h1, h2, h3
+                font-weight 300
             h1
                 font-size rem-calc(46)
-                font-weight 900
                 margin-top 0
                 margin-bottom 0
                 .red
-                    color red
+                    color lighten(red, 40%)
             h1, h2, h3
                 margin-top 0
                 color lighten(color-main-dark, 15%)
@@ -171,22 +174,26 @@ body
                 padding rem-calc(15) rem-calc(30)
                 color color-main-contrast
                 font-size rem-calc(20)
-                font-weight 900
+                font-weight 400
                 text-decoration none
-                border rem-calc(3) solid color-main-contrast
+                border rem-calc(2) solid color-main-contrast
                 transition color .3s, background-color .3s
                 margin-top rem-calc(30)
                 margin-bottom rem-calc(30)
                 &.small
                     font-size rem-calc(16)
                     padding rem-calc(10) rem-calc(20)
-                    font-weight 600
+                    font-weight 400
                     border rem-calc(2) solid color-main-contrast
                 &:hover
                     background-color color-main-contrast
                     color color-main-light
             .s-grid-read-more
                 font-size rem-calc(30)
+            .s-grid-info
+                font-size rem-calc(13)
+                font-family font-headers
+                font-weight 300
         .s-grid-tools-column
             cell(1, 2, align: 'center', g: 60)
             text-align center
@@ -207,11 +214,11 @@ body
     h1
         margin-top 0
         font-size rem-calc(40)
-        font-weight 900
+        font-weight 300
     a
         color color-main-light
         text-decoration none
-        font-weight 600
+        font-weight 300
     .s-grid-portfolio-wrapper
         grid()
         margin-bottom rem-calc(25)
@@ -226,7 +233,7 @@ body
             img
                 width auto
                 max-width 100%
-                border rem-calc(2) solid color-main-light
+                border rem-calc(1) solid color-main-light
 
 .s-grid-documentation-intro
     background-color color-main-contrast
@@ -348,9 +355,10 @@ body
 
 .s-grid-footer
     background-color color-main-dark
-    color color-main-light
+    color darken(color-main-light, 30%)
     padding-top rem-calc(30)
     padding-bottom rem-calc(30)
+    font-size rem-calc(13)
     .s-grid-footer-wrapper
         grid()
         .s-grid-footer-left-column,
@@ -359,7 +367,7 @@ body
             +above(breakpoints[md])
                 cell(1, 2, align: 'center')
             a
-                color color-main-light
+                color darken(color-main-light, 30%)
         .s-grid-footer-right-column
             text-align center
             +above(breakpoints[md])
