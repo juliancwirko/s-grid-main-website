@@ -172,12 +172,13 @@ body
             .read-more-btn
                 display inline-block
                 padding rem-calc(15) rem-calc(30)
-                color color-main-contrast
+                background-color color-main-contrast
+                color color-main-light
                 font-size rem-calc(20)
                 font-weight 400
                 text-decoration none
                 border rem-calc(2) solid color-main-contrast
-                transition color .3s, background-color .3s
+                transition border .3s, background-color .3s
                 margin-top rem-calc(30)
                 margin-bottom rem-calc(30)
                 &.small
@@ -186,8 +187,16 @@ body
                     font-weight 400
                     border rem-calc(2) solid color-main-contrast
                 &:hover
-                    background-color color-main-contrast
-                    color color-main-light
+                    background-color lighten(color-main-contrast, 20%)
+                    border rem-calc(2) solid lighten(color-main-contrast, 20%)
+                &.reversed
+                    color color-main-contrast
+                    background-color transparent
+                    border rem-calc(2) solid color-main-contrast
+                    &:hover
+                        color color-main-light
+                        background-color color-main-contrast
+                        border rem-calc(2) solid color-main-contrast
             .s-grid-read-more
                 font-size rem-calc(30)
             .s-grid-info
@@ -205,6 +214,8 @@ body
                 max-height rem-calc(200)
 .s-grid-usage
     background-color darken(color-main-light, 5%)
+    padding-top rem-calc(75)
+    padding-bottom rem-calc(75)
 .s-grid-built-with
     background-color color-main-contrast
     color color-main-light
