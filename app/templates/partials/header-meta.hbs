@@ -4,9 +4,35 @@
 <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
 <!-- build:css css/app.min.css -->
 <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
 <link rel="stylesheet" href="css/highlight.github.css">
 <link rel="stylesheet" href="css/app.css">
 <!-- endbuild -->
+
+<link rel="canonical" href="{{currentUrl}}">
+<meta name="referrer" content="origin">
+
+<meta property="og:site_name" content="sGrid">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{currentUrl}}">
+<meta property="og:image" content="http://stylusgrid.com/images/slogo.jpg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{title}}">
+<meta name="twitter:description" content="{{description}}">
+<meta name="twitter:url" content="{{currentUrl}}">
+<meta name="twitter:image" content="http://stylusgrid.com/images/slogo.jpg">
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Website",
+        "publisher": "sGrid",
+        "url": "{{currentUrl}}",
+        "description": "{{description}}"
+    }
+</script>
 
 {{> google-analytics}}
