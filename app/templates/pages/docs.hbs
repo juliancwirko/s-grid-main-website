@@ -68,11 +68,14 @@ These are main Stylus functions used in sGrid. You will find more examples below
         - +above(rem-calc(breakpoints[lg]))
         - +below(rem-calc(768px))
         - +below(768px)
-- **center(value)** - centers main container with specified width value
+- **center(width, padding)** - centers main container with specified width and padding value
     - Usage examples:
         - center(1000px)
         - center(breakpoints[md])
         - center(12.5rem)
+        - center(75%)
+        - center(1200px, 15px)
+        - center(1200px, 10%)
 - **stack()** - shortcut for cell(1, 1) - makes full width columns
     - Usage examples:
         - stack()
